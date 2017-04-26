@@ -7,7 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { AgmCoreModule} from 'angular2-google-maps/core';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +24,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCQ5y5QWFgwnnW6GnBUpWrVJ37YRSka91A'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
