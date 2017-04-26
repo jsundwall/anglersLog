@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Map
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <button ion-button (click)="setSetting()"> Set </button>
+  <button ion-button (click)="getSetting()"> get </button>
+
+  <ion-item>
+    <ion-label>Angler Name {{settings.angler_name}}</ion-label>
+    <ion-toggle [(ngModel)]="settings.angler_name"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date and Time</ion-label>
+    <ion-toggle [(ngModel)]="settings.datetime"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fishing Method</ion-label>
+    <ion-toggle [(ngModel)]="settings.fishing_method"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Breed</ion-label>
+    <ion-toggle [(ngModel)]="settings.breed"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Length</ion-label>
+    <ion-toggle [(ngModel)]="settings.length"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Weight</ion-label>
+    <ion-toggle [(ngModel)]="settings.weight"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Weather</ion-label>
+    <ion-toggle [(ngModel)]="settings.weather"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Location</ion-label>
+    <ion-toggle [(ngModel)]="settings.location"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Longitude</ion-label>
+    <ion-toggle [(ngModel)]="settings.longitude"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Latitude</ion-label>
+    <ion-toggle [(ngModel)]="settings.latitude"></ion-toggle>
+  </ion-item>
+
+  <button ion-button (click)="setData()">Save</button>
+</ion-content>
