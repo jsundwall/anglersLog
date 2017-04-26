@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Anglers Log
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,7 +12,6 @@
     <ion-card-header>
       Add new Catch
     </ion-card-header>
-
     <ion-card-content>
       <ion-item>
         <ion-label>Anglers Name</ion-label>
@@ -47,9 +46,17 @@
 
   </ion-card>
 
-  <ion-list>
-    <ion-item *ngFor="let catch of catches">
-    {{catch.weather}}
-    </ion-item>
-  </ion-list>
+  <ion-card *ngFor="let catch of catches">
+    <ion-item *ngIf="settings.angler_name"> {{catch.angler_name}} </ion-item>
+    <ion-item *ngIf="settings.datetime"> {{catch.datetime}} </ion-item>
+    <ion-item *ngIf="settings.fishing_method"> {{catch.fishing_method}} </ion-item>
+    <ion-item *ngIf="settings.breed"> {{catch.breed}} </ion-item>
+    <ion-item *ngIf="settings.length"> {{catch.length}} </ion-item>
+    <ion-item *ngIf="settings.weight"> {{catch.weight}} </ion-item>
+    <ion-item *ngIf="settings.weather"> {{catch.weather}} </ion-item>
+    <ion-item *ngIf="settings.location"> {{catch.location}} </ion-item>
+    <ion-item *ngIf="settings.latitude"> {{catch.latitude}} </ion-item>
+    <ion-item *ngIf="settings.longitude"> {{catch.longitude}} </ion-item>
+
+  </ion-card>
 </ion-content>

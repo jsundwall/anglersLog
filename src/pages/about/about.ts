@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 import { Settings } from '../../models/settings';
+import { HomePage } from '../home/home';
 
 
 @Component({
@@ -43,6 +44,7 @@ export class AboutPage {
     this.storage.get('longitude').then((val) => {
       this.settings.longitude = val;
     });
+
   }
 
   ionViewDidLoad() {
@@ -60,13 +62,11 @@ export class AboutPage {
     this.storage.set('location',this.settings.location);
     this.storage.set('latitude',this.settings.latitude);
     this.storage.set('longitude',this.settings.longitude);
-    console.log(this.settings)
-  }
+    console.log(this.settings.angler_name)
 
-  getSetting(){
-    this.storage.get('angler_name').then((val) => {
-      console.log('Your setting is', val);
-    });
+    // this.navCtrl.push(HomePage, {
+    //     angler_name: this.settings.angler_name
+    // });
   }
 
 }

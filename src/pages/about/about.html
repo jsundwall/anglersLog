@@ -1,15 +1,12 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Map
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <button ion-button (click)="setSetting()"> Set </button>
-  <button ion-button (click)="getSetting()"> get </button>
-
   <ion-item>
     <ion-label>Angler Name {{settings.angler_name}}</ion-label>
     <ion-toggle [(ngModel)]="settings.angler_name"></ion-toggle>
